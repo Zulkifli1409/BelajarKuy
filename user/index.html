@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/icon" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/0a7183f31b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style/css/style.css">
+    <title>BelajarKuy</title>
+</head>
+
+<body>
+    <!-- Nav Start -->
+<nav>
+    <a class="logo" href="../user/index.html"><img src="/img/logo" alt=""></a>
+    <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <ul class="nav-list">
+        <li><a href="../user/index.html">BERANDA</a></li>
+        <li><a href="../user/pembelajaran.html">PEMBELAJARAN</a></li>
+        <li><a href="../user/diskusi.html">DISKUSI</a></li>
+        <li id="userProfile">
+            <div class="dropdown">
+                <div class="profile-info">
+                    <div class="profile-circle">
+                        <img src="/img/pp.jpg" alt="Profile Picture">
+                    </div>
+                    <div class="profile-name">Zulkifli</div>
+                </div>
+                <div class="dropdown-content">
+                    <a href="#">Ubah Profil</a>
+                    <a href="/login/login.html">Logout</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>
+    <!-- Nav End -->
+
+    <!-- Halaman Satu -->
+    <div class="one-content" id="one-page">
+        <div class="name">
+            <h1><span id="typed-text"></span></h1>
+            <p>website belajar interaktif untuk para programmer. Kami menyediakan sumber belajar lengkap, tantangan pemrograman, dan fitur tanya jawab. Dengan desain responsif dan komunitas aktif, kami mendorong kolaborasi dan pertukaran pengetahuan antara pengguna. Bergabunglah dengan kami untuk memperdalam pemahaman dan keterampilan pemrograman secara efektif.</p>
+            <button class="btn" onclick="goToPage('/pembelajaran.html')">Belajar Sekarang!!!</button>
+        </div>
+    </div>
+
+    <!-- Halaman dua -->
+    <div class="two-content" id="two-page">
+        <div class="content-wrapper">
+            <h2>DEVELOPER BELAJARKUY</h2>
+            <div class="profile">
+                <img src="/img/pp.jpg" alt="Profile Image">
+                <div class="profile-info">
+                    <h2>Zulkifli</h2>
+                    <div class="social-media">
+                        <a href="https://www.linkedin.com/in/zul-kifli-2345b624a/" class="social-icon"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/zulkiflii.i/" class="social-icon"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/Zulkifli1409" class="social-icon"><i class="fab fa-github"></i></a>
+                    </div>
+                    <button class="btn" onclick="goToPage('https://zulkifli1409.github.io/Portofolio/')">Portfolio</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 BelajarKuy. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="/src/script.js"></script>
+</body>
+
+</html>

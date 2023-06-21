@@ -1,0 +1,420 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    /* padding: 20px; */
+        overflow-x: hidden;
+    /* overflow-y: auto; */
+}
+
+/* Nav Start */
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo img {
+    height: 63px;
+    margin-right: 8px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #23232e;
+    height: 8vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    z-index: 999;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 200px;
+    justify-content: space-between;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    left: 80%;
+
+}
+
+.mobile-menu>div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+/* Ukuran Untuk SmartPhone */
+@media (max-width: 763px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        width: 100%;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transition: top 0.5s ease-in-out;
+        height: calc(100vh - 8vh);
+        opacity: 0;
+        visibility: hidden;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .nav-list.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list li {
+        margin: 12px 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out 0.3s;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+    
+    /* Mengatur tampilan dropdown pada mode hp dan tablet */
+    .dropdown {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+        margin-top: 8px; /* Menambah jarak antara dropdown dan navigasi */
+    }
+
+    .dropdown .profile-circle {
+        display: none; /* Menyembunyikan gambar profil pada mode hp dan tablet */
+    }
+    
+    .dropdown .profile-name {
+        display: block; /* Menampilkan nama pengguna pada mode hp dan tablet */
+    }
+
+    .dropdown-content {
+        left: 50%; /* Pusatkan dropdown menu secara horizontal */
+        transform: translateX(-50%); /* Geser dropdown menu ke tengah */
+        top: 100%; /* Mengatur posisi dropdown di bawah */
+    }
+}
+
+.nav-list.active {
+    transform: translateY(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* Ukuran Untuk Tablet */
+@media (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        width: 100%;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transition: top 0.5s ease-in-out;
+        height: calc(100vh - 8vh);
+        opacity: 0;
+        visibility: hidden;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .nav-list.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list li {
+        margin: 12px 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out 0.3s;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .dropdown {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+        margin-top: 8px; /* Menambah jarak antara dropdown dan navigasi */
+    }
+
+    .dropdown .profile-circle {
+        display: none; /* Menyembunyikan gambar profil pada mode hp dan tablet */
+    }
+    
+    .dropdown .profile-name {
+        display: block; /* Menampilkan nama pengguna pada mode hp dan tablet */
+    }
+
+    .dropdown-content {
+        left: 50%; /* Pusatkan dropdown menu secara horizontal */
+        transform: translateX(-50%); /* Geser dropdown menu ke tengah */
+        top: 100%; /* Mengatur posisi dropdown di bawah */
+    }
+}
+
+.nav-list.active {
+    transform: translateY(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* Mode Ada User */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: auto; /* Menggeser dropdown ke kanan */
+    text-align: center; /* Menengahkan konten horizontal */
+}
+
+.profile-circle {
+    width: 40px; /* Mengatur lebar foto profil */
+    height: 40px; /* Mengatur tinggi foto profil */
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex; /* Mengatur tata letak vertikal untuk gambar profil dan teks */
+    align-items: center; /* Menengahkan konten secara vertikal */
+    justify-content: center; /* Menengahkan konten secara horizontal */
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    color: #fff;
+    display: flex; /* Mengatur tata letak vertikal untuk kontainer teks */
+    flex-direction: column; /* Mengatur tata letak vertikal */
+    align-items: center; /* Menengahkan konten secara vertikal */
+}
+
+.profile-name {
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Gaya tambahan untuk foto profil dan dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    background-color: #23232e;
+    padding-top: 10px;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0; /* Mulai dengan ketinggian nol */
+    overflow: hidden;
+    transition: max-height 0.3s ease; /* Animasi transisi */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px; /* Ketinggian maksimum saat dropdown ditampilkan */
+    transition: max-height 0.3s ease; /* Animasi transisi */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Nav end */
+
+
+/* Halaman Soal */
+.container {
+    max-width: 600px;
+    margin: 15vh auto 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.question-box {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+}
+
+.answer {
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: #e9e9e9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.answer:hover {
+    background-color: #d9d9d9;
+}
+
+.selected {
+    background-color: #b3b3b3 !important;
+}
+
+.btn {
+    display: block;
+    width: 100px;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+
+
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    width: 100vw;
+    background-color: #23232E;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-content p {
+    color: white;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}

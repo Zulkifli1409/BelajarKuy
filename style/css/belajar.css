@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&family=Inter:wght@300&family=Open+Sans:ital@1&family=Merriweather:wght@700&family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #AEE5D1;
+}
+
+/* Nav Start */
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo img {
+    height: 63px;
+    margin-right: 8px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #23232e;
+    height: 8vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    z-index: 999;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 200px;
+    justify-content: space-between;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    left: 80%;
+
+}
+
+.mobile-menu>div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+/* Ukuran Untuk SmartPhone */
+@media (max-width: 763px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        width: 100%;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transition: top 0.5s ease-in-out;
+        height: calc(100vh - 8vh);
+        opacity: 0;
+        visibility: hidden;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .nav-list.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list li {
+        margin: 12px 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out 0.3s;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+    
+    /* Mengatur tampilan dropdown pada mode hp dan tablet */
+    .dropdown {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+        margin-top: 8px; /* Menambah jarak antara dropdown dan navigasi */
+    }
+
+    .dropdown .profile-circle {
+        display: none; /* Menyembunyikan gambar profil pada mode hp dan tablet */
+    }
+    
+    .dropdown .profile-name {
+        display: block; /* Menampilkan nama pengguna pada mode hp dan tablet */
+    }
+
+    .dropdown-content {
+        left: 50%; /* Pusatkan dropdown menu secara horizontal */
+        transform: translateX(-50%); /* Geser dropdown menu ke tengah */
+        top: 100%; /* Mengatur posisi dropdown di bawah */
+    }
+}
+
+.nav-list.active {
+    transform: translateY(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* Ukuran Untuk Tablet */
+@media (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        width: 100%;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transition: top 0.5s ease-in-out;
+        height: calc(100vh - 8vh);
+        opacity: 0;
+        visibility: hidden;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .nav-list.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list li {
+        margin: 12px 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out 0.3s;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .dropdown {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+        margin-top: 8px; /* Menambah jarak antara dropdown dan navigasi */
+    }
+
+    .dropdown .profile-circle {
+        display: none; /* Menyembunyikan gambar profil pada mode hp dan tablet */
+    }
+    
+    .dropdown .profile-name {
+        display: block; /* Menampilkan nama pengguna pada mode hp dan tablet */
+    }
+
+    .dropdown-content {
+        left: 50%; /* Pusatkan dropdown menu secara horizontal */
+        transform: translateX(-50%); /* Geser dropdown menu ke tengah */
+        top: 100%; /* Mengatur posisi dropdown di bawah */
+    }
+}
+
+.nav-list.active {
+    transform: translateY(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* Mode Ada User */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: auto; /* Menggeser dropdown ke kanan */
+    text-align: center; /* Menengahkan konten horizontal */
+}
+
+.profile-circle {
+    width: 40px; /* Mengatur lebar foto profil */
+    height: 40px; /* Mengatur tinggi foto profil */
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex; /* Mengatur tata letak vertikal untuk gambar profil dan teks */
+    align-items: center; /* Menengahkan konten secara vertikal */
+    justify-content: center; /* Menengahkan konten secara horizontal */
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    color: #fff;
+    display: flex; /* Mengatur tata letak vertikal untuk kontainer teks */
+    flex-direction: column; /* Mengatur tata letak vertikal */
+    align-items: center; /* Menengahkan konten secara vertikal */
+}
+
+.profile-name {
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Gaya tambahan untuk foto profil dan dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    background-color: #23232e;
+    padding-top: 10px;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0; /* Mulai dengan ketinggian nol */
+    overflow: hidden;
+    transition: max-height 0.3s ease; /* Animasi transisi */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px; /* Ketinggian maksimum saat dropdown ditampilkan */
+    transition: max-height 0.3s ease; /* Animasi transisi */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Nav end */
+
+.container-progres {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+    background-color: #E4E4E4;
+    width: 70%;
+    padding: 10px;
+    margin: 10px auto;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border-style: solid;
+    border-width: medium;
+    box-shadow: 7px 7px;
+}
+
+.progres {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: medium;
+}
+
+.progres-name {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    margin-right: 20px;
+    flex: 1;
+    font-family: 'Inter', sans-serif;
+}
+
+.progres-bar {
+    width: 400px;
+    height: 20px;
+    background: #cacaca;
+    border-radius: 8px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.progres-per {
+    height: 100%;
+    background-color: #23232E;
+    border-radius: 8px;
+    width: 0;
+    transition: width 1s linear;
+    font-family: 'Inter', sans-serif;
+}
+
+.progres-per::before {
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.progres-per::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    top: -16px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+}
+
+.progres-button {
+    padding: 6px 12px;
+    background-color: #23232e;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.progres-button:hover {
+    background-color: rgba(0, 0, 0, 0.877);
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .progres {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .progres-name {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .progres-bar {
+        margin-bottom: 10px;
+        width: 180px;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .progres {
+        padding: 15px;
+    }
+}
+
+
+/* Footer */
+footer {
+    width: 100vw;
+    background-color: #23232E;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-content p {
+    color: white;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}

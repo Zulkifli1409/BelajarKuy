@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/icon" type="image/x-icon">
+    <link rel="stylesheet" href="/style/css/diskusi.css">
+    <title>Diskusi</title>
+</head>
+
+<body>
+    <!-- Nav Start -->
+<nav>
+    <a class="logo" href="../user/index.html"><img src="/img/logo" alt=""></a>
+    <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <ul class="nav-list">
+        <li><a href="../user/index.html">BERANDA</a></li>
+        <li><a href="../user/pembelajaran.html">PEMBELAJARAN</a></li>
+        <li><a href="../user/diskusi.html">DISKUSI</a></li>
+        <li id="userProfile">
+            <div class="dropdown">
+                <div class="profile-info">
+                    <div class="profile-circle">
+                        <img src="/img/pp.jpg" alt="Profile Picture">
+                    </div>
+                    <div class="profile-name">Zulkifli</div>
+                </div>
+                <div class="dropdown-content">
+                    <a href="#">Ubah Profil</a>
+                    <a href="/login/login.html">Logout</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>
+    <!-- Nav End -->
+
+    <main>
+        <h1>TEMPAT DISKUSI</h1>
+
+        <!-- Sorting -->
+        <div class="sorting-wrapper">
+            <label for="sort-select">Urutkan berdasarkan:</label>
+            <select id="sort-select">
+                <option value="terbaru">Terbaru</option>
+                <option value="Terlama">Terlama</option>
+            </select>
+        </div>
+        <!-- Search -->
+        <div class="search-wrapper">
+            <input type="text" class="search-input" placeholder="Cari pertanyaan...">
+            <button class="search-button">Cari</button>
+        </div>
+
+
+        <!-- Add Question Button -->
+        <button class="add-question-button" onclick="showForm()">Tambah Pertanyaan</button>
+
+        <div class="question-wrapper">
+            <!-- Question 1 -->
+            <div class="question">
+                <div class="question-content">
+                    <div class="question-profile">
+                        <img src="/img/pp.jpg" alt="Profil User">
+                        <div class="question-username">
+                            <span>Zulkifli</span>
+                        </div>
+                    </div>
+                    <div class="question-details">
+                        <div class="question-meta">
+                            <span class="question-date">02 Juni 2090</span>
+                            <span class="question-time">03:44:59 WIB</span>
+                            <span class="question-answers">0 Jumlah jawaban</span>
+                        </div>
+                        <div class="question-text">
+                            <p>Bang gimana caranya bernapas?</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="view-button" onclick="goToPage('../user/tampil_jawaban.html')">Lihat</button>
+            </div>
+            <!-- Question 1 End -->
+
+            <!-- Question 2 -->
+            <div class="question">
+                <div class="question-content">
+                    <div class="question-profile">
+                        <img src="https://st2.depositphotos.com/1000393/11789/i/450/depositphotos_117893952-stock-photo-hacker-with-mask.jpg"
+                            alt="Profil User">
+                        <div class="question-username">
+                            <span>Anonymous</span>
+                        </div>
+                    </div>
+                    <div class="question-details">
+                        <div class="question-meta">
+                            <span class="question-date">14 Mei 2011</span>
+                            <span class="question-time">12:55:09 WIB</span>
+                            <span class="question-answers">0 Jumlah jawaban</span>
+                        </div>
+                        <div class="question-text">
+                            <p>Bang ini cara buka pintu gimana bang?</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="view-button" onclick="goToPage('../user/tampil_jawaban.html')">Lihat</button>
+            </div>
+            <!-- Question 2 End -->
+
+            <!-- Question 3 -->
+            <div class="question">
+                <div class="question-content">
+                    <div class="question-profile">
+                        <img src="https://awsimages.detik.net.id/customthumb/2013/01/07/230/udinseduniadlm.jpg?w=600&q=90"
+                            alt="Profil User">
+                        <div class="question-username">
+                            <span>Bang Din</span>
+                        </div>
+                    </div>
+                    <div class="question-details">
+                        <div class="question-meta">
+                            <span class="question-date">11 September 2000</span>
+                            <span class="question-time">13:44:40 WIB</span>
+                            <span class="question-answers">0 Jumlah jawaban</span>
+                        </div>
+                        <div class="question-text">
+                            <p>Udin yang disana siapa bang namanya?</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="view-button" onclick="goToPage('../user/tampil_jawaban.html')">Lihat</button>
+            </div>
+            <!-- Question 3 End -->
+
+            <!-- Question 4 -->
+            <div class="question">
+                <div class="question-content">
+                    <div class="question-profile">
+                        <img src="https://thumbor.prod.vidiocdn.com/vT9ZlFFlDbts1enZDPZljdjXaFg=/smart/filters:strip_icc():quality(70)/vidio-web-prod-user/uploads/user/avatar/158492/asep-supriyadi-9124be.jpg"
+                            alt="Profil User">
+                        <div class="question-username">
+                            <span>Asep</span>
+                        </div>
+                    </div>
+                    <div class="question-details">
+                        <div class="question-meta">
+                            <span class="question-date">11 Desember 2056</span>
+                            <span class="question-time">09:44:10 WIB</span>
+                            <span class="question-answers">0 Jumlah jawaban</span>
+                        </div>
+                        <div class="question-text">
+                            <p>Bang ada nomor wa gaa?</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="view-button" onclick="goToPage('../user/tampil_jawaban.html')">Lihat</button>
+            </div>
+            <!-- Question 4 End -->
+
+            <!-- Question 5 -->
+            <div class="question">
+                <div class="question-content">
+                    <div class="question-profile">
+                        <img src="https://res.cloudinary.com/teepublic/image/private/s--p6Bm-xYR--/c_fit,g_north_west,h_840,w_677/co_ffffff,e_outline:40/co_ffffff,e_outline:inner_fill:1/co_ffffff,e_outline:40/co_ffffff,e_outline:inner_fill:1/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1490209454/production/designs/1346385_1.jpg"
+                            alt="Profil User">
+                        <div class="question-username">
+                            <span>Yao Ming</span>
+                        </div>
+                    </div>
+                    <div class="question-details">
+                        <div class="question-meta">
+                            <span class="question-date">02 Juni 2023</span>
+                            <span class="question-time">11:44:59 WIB</span>
+                            <span class="question-answers">0 Jumlah jawaban</span>
+                        </div>
+                        <div class="question-text">
+                            <p>Tutor tinggi deck?</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="view-button" onclick="goToPage('../user/tampil_jawaban.html')">Lihat</button>
+            </div>
+            <!-- Question 5 End -->
+        </div>
+        <button class="btn" onclick="goToPage('')">Lebih Banyak</button>
+        <!-- Question Wrapper End -->
+    </main>
+
+    <!-- Form Tambah Pertanyaan -->
+    <div id="floating-form" class="floating-form">
+        <div class="form-container">
+            <h2>TAMBAH DISKUSI</h2>
+            <form>
+                <label for="question">Pertanyaan:</label>
+                <textarea id="question" name="question" required></textarea>
+
+                <button type="submit">Kirim</button>
+            </form>
+            <button id="close-form" class="close-button" onclick="closeForm()">Tutup</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 BelajarKuy. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+    <script src="/src/script.js"></script>
+</body>
+
+</html>

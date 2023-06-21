@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Open+Sans:ital@1&family=Poppins:wght@100;200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #AEE5D1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Nav Start */
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo img {
+    height: 63px;
+    margin-right: 8px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #23232e;
+    height: 8vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    z-index: 999;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 200px;
+    justify-content: space-between;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    left: 80%;
+
+}
+
+.mobile-menu>div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+/* Ukuran Untuk SmartPhone */
+@media (max-width: 763px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        width: 100%;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transition: top 0.5s ease-in-out;
+        height: calc(100vh - 8vh);
+        opacity: 0;
+        visibility: hidden;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .nav-list.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list li {
+        margin: 12px 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out 0.3s;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateY(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* Ukuran Untuk Tablet */
+@media (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        width: 100%;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transition: top 0.5s ease-in-out;
+        height: calc(100vh - 8vh);
+        opacity: 0;
+        visibility: hidden;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .nav-list.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list li {
+        margin: 12px 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out 0.3s;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateY(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* Nav end */
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    background-color: #E4E4E4;
+    padding: 20px;
+    border-radius: 8px;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: medium;
+    box-shadow: 7px 7px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    height: auto;
+    max-width: 70%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+
+}
+
+.password-container {
+    position: relative;
+}
+
+input[type="password"],
+input[type="text"],
+input[type="email"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #555;
+}
+
+.show-password {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-60%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.show-password:focus {
+    outline: none;
+}
+
+.show-password-icon {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    transition: color 0.3s ease;
+}
+
+.show-password-icon:hover {
+    color: #555;
+}
+
+.show-password-icon::before {
+    content: "\f06e";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #23232e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #20202a;
+}
+
+input[type="button"] {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #23232e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="button"]:hover {
+    background-color: #20202a;
+}
+
+.link-container {
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me-label {
+    margin-left: 5px;
+}
+
+.password-reset-link {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.password-reset-link a {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.password-reset-link a:hover {
+    color: #555;
+}
+
+.register-link,
+.login-link {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.register-link a,
+.login-link a {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #555;
+}
+
+/* Responsiveness for Mobile */
+@media (max-width: 480px) {
+    form {
+        width: 70%;
+        max-width: 300px;
+    }
+
+    .logo {
+        max-width: 60%;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input[type="password"],
+    input[type="text"],
+    input[type="email"] {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .show-password {
+        right: 10px;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
+    }
+}
+
+/* Responsiveness for Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    form {
+        width: 70%;
+    }
+
+    .logo {
+        max-width: 60%;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    input[type="password"],
+    input[type="text"],
+    input[type="email"] {
+        width: 95%;
+        font-size: 16px;
+    }
+
+    .show-password {
+        right: 15px;
+    }
+
+    input[type="submit"] {
+        font-size: 16px;
+    }
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #23232E;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-content p {
+    color: white;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+

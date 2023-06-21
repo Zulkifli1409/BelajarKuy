@@ -1,0 +1,742 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&family=Inter:wght@300&family=Open+Sans:ital@1&family=Merriweather:wght@700&family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #AEE5D1;
+
+}
+
+/* Nav Start */
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo img {
+    height: 63px;
+    margin-right: 8px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #23232e;
+    height: 8vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    z-index: 999;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 200px;
+    justify-content: space-between;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    left: 80%;
+
+}
+
+.mobile-menu>div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+/* Ukuran Untuk SmartPhone */
+@media (max-width: 763px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        width: 100%;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transition: top 0.5s ease-in-out;
+        height: calc(100vh - 8vh);
+        opacity: 0;
+        visibility: hidden;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .nav-list.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list li {
+        margin: 12px 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out 0.3s;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+    
+    /* Mengatur tampilan dropdown pada mode hp dan tablet */
+    .dropdown {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+        margin-top: 8px; /* Menambah jarak antara dropdown dan navigasi */
+    }
+
+    .dropdown .profile-circle {
+        display: none; /* Menyembunyikan gambar profil pada mode hp dan tablet */
+    }
+    
+    .dropdown .profile-name {
+        display: block; /* Menampilkan nama pengguna pada mode hp dan tablet */
+    }
+
+    .dropdown-content {
+        left: 50%; /* Pusatkan dropdown menu secara horizontal */
+        transform: translateX(-50%); /* Geser dropdown menu ke tengah */
+        top: 100%; /* Mengatur posisi dropdown di bawah */
+    }
+}
+
+.nav-list.active {
+    transform: translateY(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* Ukuran Untuk Tablet */
+@media (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        width: 100%;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transition: top 0.5s ease-in-out;
+        height: calc(100vh - 8vh);
+        opacity: 0;
+        visibility: hidden;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .nav-list.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list li {
+        margin: 12px 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out 0.3s;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .dropdown {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+        margin-top: 8px; /* Menambah jarak antara dropdown dan navigasi */
+    }
+
+    .dropdown .profile-circle {
+        display: none; /* Menyembunyikan gambar profil pada mode hp dan tablet */
+    }
+    
+    .dropdown .profile-name {
+        display: block; /* Menampilkan nama pengguna pada mode hp dan tablet */
+    }
+
+    .dropdown-content {
+        left: 50%; /* Pusatkan dropdown menu secara horizontal */
+        transform: translateX(-50%); /* Geser dropdown menu ke tengah */
+        top: 100%; /* Mengatur posisi dropdown di bawah */
+    }
+}
+
+.nav-list.active {
+    transform: translateY(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* Mode Ada User */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: auto; /* Menggeser dropdown ke kanan */
+    text-align: center; /* Menengahkan konten horizontal */
+}
+
+.profile-circle {
+    width: 40px; /* Mengatur lebar foto profil */
+    height: 40px; /* Mengatur tinggi foto profil */
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex; /* Mengatur tata letak vertikal untuk gambar profil dan teks */
+    align-items: center; /* Menengahkan konten secara vertikal */
+    justify-content: center; /* Menengahkan konten secara horizontal */
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    color: #fff;
+    display: flex; /* Mengatur tata letak vertikal untuk kontainer teks */
+    flex-direction: column; /* Mengatur tata letak vertikal */
+    align-items: center; /* Menengahkan konten secara vertikal */
+}
+
+.profile-name {
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Gaya tambahan untuk foto profil dan dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    background-color: #23232e;
+    padding-top: 10px;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0; /* Mulai dengan ketinggian nol */
+    overflow: hidden;
+    transition: max-height 0.3s ease; /* Animasi transisi */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px; /* Ketinggian maksimum saat dropdown ditampilkan */
+    transition: max-height 0.3s ease; /* Animasi transisi */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Nav end */
+
+/* Footer */
+footer {
+    width: 100vw;
+    background-color: #23232E;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-content p {
+    color: white;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+/* Main start */
+.sorting-wrapper {
+    margin-right: 0;
+    /* Menghilangkan margin kanan pada elemen sorting agar tidak ada spasi di sebelah kanan */
+}
+
+
+.search-wrapper {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.search-input {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #E4E4E4;
+    border: 1px solid #23232E;
+}
+
+.search-button {
+    background-color: #E4E4E4;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border: 1px solid #23232E;
+}
+
+.search-button:hover {
+    background-color: #ccc;
+}
+
+.sorting-wrapper {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sorting-wrapper label {
+    margin-right: 10px;
+}
+
+.sorting-wrapper select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #23232E;
+    background-color: #E4E4E4;
+
+}
+
+.add-question-button {
+    background-color: #E4E4E4;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border: 1px solid #23232E;
+}
+
+.add-question-button:hover {
+    background-color: #ccc;
+}
+
+/* Content */
+main {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    background-color: #AEE5D1;
+
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-family: 'Wix Madefor Text', sans-serif;
+}
+
+.question-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 12px;
+    margin-left: 50px;
+}
+
+.question-meta span {
+    margin-right: 10px;
+}
+
+.question-wrapper {
+    background-color: #E4E4E4;
+    width: 70%;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border-style: solid;
+    border-width: medium;
+    box-shadow: 7px 7px;
+}
+
+.question-wrapper .question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border-style: solid;
+    border-width: medium;
+    box-shadow: 7px 7px;
+    padding: 10px;
+    /* Ubah nilai padding sesuai kebutuhan */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.question-wrapper .question-content {
+    display: flex;
+    align-items: center;
+    margin-right: 70px;
+}
+
+
+.question-wrapper .question-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.question-wrapper .question-details {
+    flex-grow: 1;
+    margin-left: 10px;
+
+}
+
+.question-wrapper .question-username {
+    font-family: 'Wix Madefor Text', sans-serif;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.question-wrapper .question-text {
+    font-family: 'Wix Madefor Text', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 0;
+
+}
+
+.question-wrapper .view-button {
+    background-color: #E4E4E4;
+    color: #333;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    right: 5px;
+    font-weight: bold;
+    border: 1px solid #23232E;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 10px;
+}
+
+.question-wrapper .view-button:hover {
+    background-color: #ccc;
+}
+
+/* button lainnya */
+.btn {
+    background-color: #E4E4E4;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border: 1px solid #23232E;
+}
+
+.btn:hover {
+    background-color: #ccc;
+    color: #23232e;
+}
+
+@media screen and (max-width: 480px) {
+    .question-wrapper {
+        position: relative;
+    }
+
+    .question-wrapper .question-content {
+        margin-right: 0;
+    }
+
+    .question-wrapper .question-profile img {
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+    }
+
+    .question-meta {
+        font-size: 10px;
+        margin-left: 30px;
+    }
+
+    .question-wrapper .question-text {
+        padding-bottom: 40px;
+        /* Add padding to the bottom of the question text */
+    }
+
+    .question-wrapper .view-button {
+        position: absolute;
+        bottom: 10px;
+        right: 5px;
+        width: calc(100% - 10px);
+    }
+
+    .btn {
+        margin-right: 30px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .question-wrapper {
+        width: 80%;
+    }
+
+    .question-wrapper .question-content {
+        margin-right: 50px;
+    }
+
+    .question-wrapper .view-button {
+        right: 10px;
+        width: auto;
+    }
+
+    .btn {
+        margin-right: 20px;
+    }
+
+    /* Sorting Wrapper */
+    .sorting-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .sorting-wrapper label {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .sorting-wrapper select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Search Wrapper */
+    .search-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .search-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* Add Question Button */
+    .add-question-button {
+        width: 50%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Lebih Banyak Button */
+    .btn {
+        width: 25%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Form tambah pertanyaan */
+.floating-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.floating-form h2 {
+    margin-top: 0;
+    text-align: center;
+    font-size: larger;
+}
+
+.floating-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.floating-form input[type="text"],
+.floating-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.floating-form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.floating-form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.floating-form .close-button {
+    margin-top: 10px;
+    background-color: #ccc;
+    color: #333;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.floating-form .close-button:hover {
+    background-color: #999;
+}

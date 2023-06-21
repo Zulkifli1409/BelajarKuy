@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<html>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/icon" type="image/x-icon">
+    <link rel="stylesheet" href="/style/css/soal.css">
+<head>
+    <title>Halaman Web Soal</title>
+</head>
+
+<body>
+        <!-- Nav Start -->
+<nav>
+    <a class="logo" href="../user/index.html"><img src="/img/logo" alt=""></a>
+    <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <ul class="nav-list">
+        <li><a href="../user/index.html">BERANDA</a></li>
+        <li><a href="../user/pembelajaran.html">PEMBELAJARAN</a></li>
+        <li><a href="../user/diskusi.html">DISKUSI</a></li>
+        <li id="userProfile">
+            <div class="dropdown">
+                <div class="profile-info">
+                    <div class="profile-circle">
+                        <img src="/img/pp.jpg" alt="Profile Picture">
+                    </div>
+                    <div class="profile-name">Zulkifli</div>
+                </div>
+                <div class="dropdown-content">
+                    <a href="#">Ubah Profil</a>
+                    <a href="/login/login.html">Logout</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>
+    <!-- Nav End -->
+    <div class="container">
+        <h1>SOAL PENJUMLAHAN</h1>
+        <h2>SOAL 1</h2>
+        <div class="question-box">
+            <p>2 + 2</p>
+        </div>
+        <div class="answers">
+            <div class="answer" onclick="selectAnswer(this)">3</div>
+            <div class="answer" onclick="selectAnswer(this)">5</div>
+            <div class="answer" onclick="selectAnswer(this)">4</div>
+            <div class="answer" onclick="selectAnswer(this)">1</div>
+        </div>
+        <a class="btn" href="#">Submit</a>
+    </div>
+    
+        <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 BelajarKuy. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+    <script src="/src/script.js"></script>
+</body>
+
+</html>

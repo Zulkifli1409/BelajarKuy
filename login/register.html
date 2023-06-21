@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/css/login.css">
+    <link rel="shortcut icon" href="img/happiness.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/0a7183f31b.js" crossorigin="anonymous"></script>
+    <title>Register</title>
+</head>
+
+<body>
+    <nav>
+        <a class="logo" href="/index.html"><img src="/img/logo" alt=""></a>
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+            <li><a href="/index.html">BERANDA</a></li>
+            <li><a href="/pembelajaran.html">PEMBELAJARAN</a></li>
+            <li><a href="/diskusi.html">DISKUSI</a></li>
+            <li><a href="/login/register.html">DAFTAR</a></li>
+            <li><a href="/login/login.html">MASUK</a></li>
+        </ul>
+    </nav>
+
+    <form action="register.php" class="container-form">
+        <h2>REGISTER</h2>
+        <div class="logo-container">
+            <img src="/img/logo_2" alt="" class="logo">
+        </div>
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <div class="password-container">
+            <input type="password" id="password" name="password" required>
+            <button type="button" class="show-password" onclick="togglePasswordVisibility()">
+                <span class="show-password-icon"></span>
+            </button>
+        </div>
+        <label for="password">Confirm Password:</label>
+        <div class="password-container">
+            <input type="password" id="password" name="password" required>
+            <button type="button" class="show-password" onclick="togglePasswordVisibility()">
+                <span class="show-password-icon"></span>
+            </button>
+        </div>
+        <input type="submit" value="Register">
+        <div class="login-link">
+            Sudah punya akun? <a href="/login/login.html">Login</a>
+        </div>
+    </form>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 BelajarKuy. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+    <script src="/src/script.js"></script>
+</body>
+
+</html>
