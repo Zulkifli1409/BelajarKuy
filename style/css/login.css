@@ -10,12 +10,10 @@
 
 
 body {
+    overflow-x: hidden;
+    overflow-y: auto;
     font-family: Arial, sans-serif;
     background-color: #AEE5D1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 /* Nav Start */
@@ -216,24 +214,29 @@ nav {
 
 /* Nav end */
 
+/* Main Content */
 h2 {
     text-align: center;
     color: #333;
 }
 
 form {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 15%;
     width: 300px;
     background-color: #E4E4E4;
     padding: 20px;
-    border-radius: 8px;
     border-radius: 8px;
     border-style: solid;
     border-width: medium;
     box-shadow: 7px 7px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 
 .logo-container {
     display: flex;
@@ -249,7 +252,6 @@ label {
     display: block;
     margin-bottom: 5px;
     color: #333;
-
 }
 
 .password-container {
@@ -386,6 +388,8 @@ input[type="button"]:hover {
 /* Responsiveness for Mobile */
 @media (max-width: 480px) {
     form {
+        margin-top: 20%;
+        margin-bottom: 30%;
         width: 70%;
         max-width: 300px;
     }
@@ -446,25 +450,151 @@ input[type="button"]:hover {
 
 /* Footer */
 footer {
-    width: 100%;
-    background-color: #23232E;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
+    background-color: #23232e;
+    padding: 30px 0;
+    color: #ccc;
+    font-size: 14px;
+    box-shadow: 0px -7px 6px 1px #000000;
 }
 
-.footer-content {
+.footer-col img {
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-footer {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.row-footer {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.footer-content p {
-    color: white;
+.footer-col {
+    flex-basis: 20%;
+    margin-bottom: 30px;
+}
+
+.footer-col h4 {
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.footer-col p,
+.footer-col ul {
+    text-align: center;
     margin: 0;
-    font-family: 'Nunito', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer-col iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-col ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+}
+
+.media-social {
+    display: flex;
+    justify-content: center;
+
+}
+
+.media-social a {
+    display: inline-block;
+    font-size: 20px;
+    color: white;
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.media-social a:hover {
+    background-color: #fff;
+    color: #23232e;
+}
+
+.footer-content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+/* Footer Responsif untuk Ponsel */
+@media (max-width: 767px) {
+    .footer-col {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-col h4 {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .footer-col ul li {
+        margin-bottom: 5px;
+    }
+
+    .footer-col ul li a {
+        font-size: 16px;
+    }
+
+    .media-social {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-content {
+        margin-top: 10px;
+    }
+}
+
+/* Footer Responsif untuk Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    .footer-col {
+        flex-basis: 50%;
+        margin-bottom: 30px;
+    }
+
+    .footer-col h4 {
+        font-size: 20px;
+    }
 }
 
