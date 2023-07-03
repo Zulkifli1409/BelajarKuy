@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Open+Sans:ital@1&family=Poppins:wght@100;200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -206,26 +211,20 @@ nav {
         justify-content: center;
         margin-left: 0;
         margin-top: 8px;
-        /* Menambah jarak antara dropdown dan navigasi */
     }
 
     .dropdown .profile-circle {
         display: none;
-        /* Menyembunyikan gambar profil pada mode hp dan tablet */
     }
 
     .dropdown .profile-name {
         display: block;
-        /* Menampilkan nama pengguna pada mode hp dan tablet */
     }
 
     .dropdown-content {
         left: 50%;
-        /* Pusatkan dropdown menu secara horizontal */
         transform: translateX(-50%);
-        /* Geser dropdown menu ke tengah */
         top: 100%;
-        /* Mengatur posisi dropdown di bawah */
     }
 }
 

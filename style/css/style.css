@@ -121,21 +121,21 @@ nav {
         align-items: center;
         justify-content: center;
         margin-left: 0;
-        margin-top: 8px; /* Menambah jarak antara dropdown dan navigasi */
+        margin-top: 8px;
     }
 
     .dropdown .profile-circle {
-        display: none; /* Menyembunyikan gambar profil pada mode hp dan tablet */
+        display: none;
     }
     
     .dropdown .profile-name {
-        display: block; /* Menampilkan nama pengguna pada mode hp dan tablet */
+        display: block; 
     }
 
     .dropdown-content {
-        left: 50%; /* Pusatkan dropdown menu secara horizontal */
-        transform: translateX(-50%); /* Geser dropdown menu ke tengah */
-        top: 100%; /* Mengatur posisi dropdown di bawah */
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%;
     }
 }
 
@@ -210,21 +210,21 @@ nav {
         align-items: center;
         justify-content: center;
         margin-left: 0;
-        margin-top: 8px; /* Menambah jarak antara dropdown dan navigasi */
+        margin-top: 8px;
     }
 
     .dropdown .profile-circle {
-        display: none; /* Menyembunyikan gambar profil pada mode hp dan tablet */
+        display: none;
     }
     
     .dropdown .profile-name {
-        display: block; /* Menampilkan nama pengguna pada mode hp dan tablet */
+        display: block;
     }
 
     .dropdown-content {
-        left: 50%; /* Pusatkan dropdown menu secara horizontal */
-        transform: translateX(-50%); /* Geser dropdown menu ke tengah */
-        top: 100%; /* Mengatur posisi dropdown di bawah */
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%;
     }
 }
 
@@ -257,7 +257,6 @@ nav {
 }
 
 /* Mode Ada User */
-
 .dropdown {
     position: relative;
     display: inline-block;
@@ -283,9 +282,9 @@ nav {
 
 .profile-info {
     color: #fff;
-    display: flex; /* Mengatur tata letak vertikal untuk kontainer teks */
-    flex-direction: column; /* Mengatur tata letak vertikal */
-    align-items: center; /* Menengahkan konten secara vertikal */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
 }
 
 .profile-name {
@@ -305,17 +304,17 @@ nav {
     text-align: left;
     opacity: 0;
     visibility: hidden;
-    max-height: 0; /* Mulai dengan ketinggian nol */
+    max-height: 0; 
     overflow: hidden;
-    transition: max-height 0.3s ease; /* Animasi transisi */
+    transition: max-height 0.3s ease;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
     opacity: 1;
     visibility: visible;
-    max-height: 500px; /* Ketinggian maksimum saat dropdown ditampilkan */
-    transition: max-height 0.3s ease; /* Animasi transisi */
+    max-height: 500px;
+    transition: max-height 0.3s ease;
 }
 
 .dropdown-content a {
@@ -639,51 +638,5 @@ footer {
         font-size: 20px;
     }
 }
-
-/* Untuk Webkit (Chrome, Safari, Opera) */
-/* ::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-    border-radius: 6px;
-} 
-
-::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 6px;
-} */
-
-/* Untuk Firefox */
-/* ::-moz-scrollbar {
-    width: 12px;
-}
-
-::-moz-scrollbar-track {
-    background-color: #f1f1f1;
-    border-radius: 6px;
-}
-
-::-moz-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 6px;
-} */
-
-/* Untuk Edge dan Internet Explorer */
-/* ::-ms-scrollbar {
-    width: 12px;
-}
-
-::-ms-scrollbar-track {
-    background-color: #f1f1f1;
-    border-radius: 6px;
-}
-
-::-ms-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 6px;
-}
-     */
 
 

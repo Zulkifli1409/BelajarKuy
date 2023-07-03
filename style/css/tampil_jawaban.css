@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text&display=swap');
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -119,21 +120,21 @@ nav {
         align-items: center;
         justify-content: center;
         margin-left: 0;
-        margin-top: 8px; /* Menambah jarak antara dropdown dan navigasi */
+        margin-top: 8px; 
     }
 
     .dropdown .profile-circle {
-        display: none; /* Menyembunyikan gambar profil pada mode hp dan tablet */
+        display: none; 
     }
     
     .dropdown .profile-name {
-        display: block; /* Menampilkan nama pengguna pada mode hp dan tablet */
+        display: block; 
     }
 
     .dropdown-content {
-        left: 50%; /* Pusatkan dropdown menu secara horizontal */
-        transform: translateX(-50%); /* Geser dropdown menu ke tengah */
-        top: 100%; /* Mengatur posisi dropdown di bawah */
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%;
     }
 }
 
@@ -208,21 +209,21 @@ nav {
         align-items: center;
         justify-content: center;
         margin-left: 0;
-        margin-top: 8px; /* Menambah jarak antara dropdown dan navigasi */
+        margin-top: 8px;
     }
 
     .dropdown .profile-circle {
-        display: none; /* Menyembunyikan gambar profil pada mode hp dan tablet */
+        display: none;
     }
     
     .dropdown .profile-name {
-        display: block; /* Menampilkan nama pengguna pada mode hp dan tablet */
+        display: block;
     }
 
     .dropdown-content {
-        left: 50%; /* Pusatkan dropdown menu secara horizontal */
-        transform: translateX(-50%); /* Geser dropdown menu ke tengah */
-        top: 100%; /* Mengatur posisi dropdown di bawah */
+        left: 50%; 
+        transform: translateX(-50%); 
+        top: 100%;
     }
 }
 
@@ -259,18 +260,18 @@ nav {
 .dropdown {
     position: relative;
     display: inline-block;
-    margin-left: auto; /* Menggeser dropdown ke kanan */
-    text-align: center; /* Menengahkan konten horizontal */
+    margin-left: auto; 
+    text-align: center;
 }
 
 .profile-circle {
-    width: 40px; /* Mengatur lebar foto profil */
-    height: 40px; /* Mengatur tinggi foto profil */
+    width: 40px; 
+    height: 40px;
     border-radius: 50%;
     overflow: hidden;
-    display: flex; /* Mengatur tata letak vertikal untuk gambar profil dan teks */
-    align-items: center; /* Menengahkan konten secara vertikal */
-    justify-content: center; /* Menengahkan konten secara horizontal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .profile-circle img {
@@ -281,9 +282,9 @@ nav {
 
 .profile-info {
     color: #fff;
-    display: flex; /* Mengatur tata letak vertikal untuk kontainer teks */
-    flex-direction: column; /* Mengatur tata letak vertikal */
-    align-items: center; /* Menengahkan konten secara vertikal */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
 }
 
 .profile-name {
@@ -303,17 +304,17 @@ nav {
     text-align: left;
     opacity: 0;
     visibility: hidden;
-    max-height: 0; /* Mulai dengan ketinggian nol */
+    max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease; /* Animasi transisi */
+    transition: max-height 0.3s ease;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
     opacity: 1;
     visibility: visible;
-    max-height: 500px; /* Ketinggian maksimum saat dropdown ditampilkan */
-    transition: max-height 0.3s ease; /* Animasi transisi */
+    max-height: 500px;
+    transition: max-height 0.3s ease; 
 }
 
 .dropdown-content a {
@@ -380,7 +381,6 @@ h1 {
     border-width: medium;
     box-shadow: 7px 7px;
     padding: 10px;
-    /* Ubah nilai padding sesuai kebutuhan */
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -460,11 +460,8 @@ h1 {
     box-shadow: 7px 7px;
     margin-bottom: 100px;
     display: flex;
-    /* Added */
     flex-direction: column;
-    /* Added */
     align-items: flex-start;
-    /* Added */
 }
 
 .additional-answer h2 {
@@ -477,7 +474,6 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* Updated */
 }
 
 .additional-answer textarea.answer-text {
@@ -520,6 +516,7 @@ footer {
     color: #ccc;
     font-size: 14px;
     box-shadow: 0px -7px 6px 1px #000000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .footer-col img {
@@ -550,15 +547,13 @@ footer {
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
 }
 
 .footer-col p,
 .footer-col ul {
     text-align: center;
     margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
 .footer-col iframe {
@@ -576,7 +571,6 @@ footer {
     text-decoration: none;
     color: #ccc;
     font-size: 20px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     transition: color 0.3s ease;
 }
 

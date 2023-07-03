@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&family=Inter:wght@300&family=Open+Sans:ital@1&family=Merriweather:wght@700&family=Nunito:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -116,21 +121,21 @@ nav {
         align-items: center;
         justify-content: center;
         margin-left: 0;
-        margin-top: 8px; /* Menambah jarak antara dropdown dan navigasi */
+        margin-top: 8px; 
     }
 
     .dropdown .profile-circle {
-        display: none; /* Menyembunyikan gambar profil pada mode hp dan tablet */
+        display: none;
     }
     
     .dropdown .profile-name {
-        display: block; /* Menampilkan nama pengguna pada mode hp dan tablet */
+        display: block;
     }
 
     .dropdown-content {
-        left: 50%; /* Pusatkan dropdown menu secara horizontal */
-        transform: translateX(-50%); /* Geser dropdown menu ke tengah */
-        top: 100%; /* Mengatur posisi dropdown di bawah */
+        left: 50%; 
+        transform: translateX(-50%);
+        top: 100%; 
     }
 }
 
@@ -205,21 +210,21 @@ nav {
         align-items: center;
         justify-content: center;
         margin-left: 0;
-        margin-top: 8px; /* Menambah jarak antara dropdown dan navigasi */
+        margin-top: 8px;
     }
 
     .dropdown .profile-circle {
-        display: none; /* Menyembunyikan gambar profil pada mode hp dan tablet */
+        display: none; 
     }
     
     .dropdown .profile-name {
-        display: block; /* Menampilkan nama pengguna pada mode hp dan tablet */
+        display: block;
     }
 
     .dropdown-content {
-        left: 50%; /* Pusatkan dropdown menu secara horizontal */
-        transform: translateX(-50%); /* Geser dropdown menu ke tengah */
-        top: 100%; /* Mengatur posisi dropdown di bawah */
+        left: 50%; 
+        transform: translateX(-50%);
+        top: 100%;
     }
 }
 
@@ -256,18 +261,18 @@ nav {
 .dropdown {
     position: relative;
     display: inline-block;
-    margin-left: auto; /* Menggeser dropdown ke kanan */
-    text-align: center; /* Menengahkan konten horizontal */
+    margin-left: auto; 
+    text-align: center;
 }
 
 .profile-circle {
-    width: 40px; /* Mengatur lebar foto profil */
-    height: 40px; /* Mengatur tinggi foto profil */
+    width: 40px; 
+    height: 40px;
     border-radius: 50%;
     overflow: hidden;
-    display: flex; /* Mengatur tata letak vertikal untuk gambar profil dan teks */
-    align-items: center; /* Menengahkan konten secara vertikal */
-    justify-content: center; /* Menengahkan konten secara horizontal */
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
 }
 
 .profile-circle img {
@@ -278,9 +283,9 @@ nav {
 
 .profile-info {
     color: #fff;
-    display: flex; /* Mengatur tata letak vertikal untuk kontainer teks */
-    flex-direction: column; /* Mengatur tata letak vertikal */
-    align-items: center; /* Menengahkan konten secara vertikal */
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
 }
 
 .profile-name {
@@ -300,17 +305,17 @@ nav {
     text-align: left;
     opacity: 0;
     visibility: hidden;
-    max-height: 0; /* Mulai dengan ketinggian nol */
+    max-height: 0; 
     overflow: hidden;
-    transition: max-height 0.3s ease; /* Animasi transisi */
+    transition: max-height 0.3s ease; 
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
     opacity: 1;
     visibility: visible;
-    max-height: 500px; /* Ketinggian maksimum saat dropdown ditampilkan */
-    transition: max-height 0.3s ease; /* Animasi transisi */
+    max-height: 500px; 
+    transition: max-height 0.3s ease; 
 }
 
 .dropdown-content a {
@@ -319,8 +324,6 @@ nav {
     text-decoration: none;
     display: block;
 }
-
-
 /* Nav end */
 
 .container-progres {
