@@ -9,3 +9,6 @@ username : admin
 password : admin123
 
 SUPAYA TIDAK LAG SAAT MEMBUKA WEBSITE, ANDA DAPAT MENGCLONE KAN REPO SAYA DA MENCOBANYA SENDIRI
+
+HOSTING LAINNYA :
+https://belajarkuy1409.000webhostapp.com/
